@@ -236,7 +236,8 @@ def write_communities(out_stream, edge_file, cluster_node_map):
 def write_persistence_node_attribute(out_stream, persistence_map):
     """
 
-    :param out_stream:
+    :param out_stream: output stream
+    :type out_stream: file object
     :param persistence_map:
     :return:
     """

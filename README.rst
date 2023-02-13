@@ -16,7 +16,7 @@ cdhidefhcx
 
 
 
-Creates hierarchy viin HCX format via HiDef from protein to protein interaction network in CX2 format
+Creates hierarchy in `HCX`_ (HCX link needs to be fixed) format via HiDef from interaction network in `CX2`_ format
 
 
 * Free software: MIT license
@@ -72,27 +72,6 @@ Output:
    dockerbuild          build docker image and store in local repository
    dockerpush           push image to dockerhub
 
-For developers
--------------------------------------------
-
-To deploy development versions of this package
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Below are steps to make changes to this code base, deploy, and then run
-against those changes.
-
-#. Make changes
-
-   Modify code in this repo as desired
-
-#. Build and deploy
-
-.. code-block::
-
-    # From base directory of this repo cdhidefhcx
-    pip uninstall cdhidefhcx -y ; make clean dist; pip install dist/cdhidefhcx*whl
-
-
 
 Needed files
 ------------
@@ -135,3 +114,5 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _NDEx: http://www.ndexbio.org
+.. _CX2: https://cytoscape.org/cx/cx2/specification/2022/12/01/cytoscape-exchange-format-specification-(version-2).html
+.. _HCX: https://cytoscape.org/cx/hcx

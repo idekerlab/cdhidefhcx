@@ -115,4 +115,4 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _NDEx: http://www.ndexbio.org
 .. _CX2: https://cytoscape.org/cx/cx2/specification/2022/12/01/cytoscape-exchange-format-specification-(version-2).html
-.. _HCX: https://cytoscape.org/cx/hcx
+.. _HCX: https://docs.google.com/document/d/1zRWZW8F0zBvV5r_7JsgKfjN6-yH0GWwVWh7XuytmoNQ/edit#heading=h.979nwc8qpa9r

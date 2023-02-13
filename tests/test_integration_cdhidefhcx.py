@@ -15,9 +15,6 @@ import tempfile
 import shutil
 import json
 import subprocess
-import stat
-from unittest.mock import MagicMock
-from cdhidef import cdhidefcmd
 
 
 SKIP_REASON = 'CDHIDEFHCX_DOCKER_IMAGE, CDHIDEFHCX_DOCKER, CDHIDEFHCX_TMPDIR environment ' \
@@ -28,7 +25,7 @@ SKIP_REASON = 'CDHIDEFHCX_DOCKER_IMAGE, CDHIDEFHCX_DOCKER, CDHIDEFHCX_TMPDIR env
 @unittest.skipUnless(os.getenv('CDHIDEFHCX_DOCKER_IMAGE') is not None and
                      os.getenv('CDHIDEFHCX_DOCKER') is not None and
                      os.getenv('CDHIDEFHCX_TMPDIR') is not None, SKIP_REASON)
-class TestCdhidefInDocker(unittest.TestCase):
+class TestCdhidefHCXInDocker(unittest.TestCase):
 
     TEST_DIR = os.path.dirname(__file__)
 
@@ -64,7 +61,7 @@ class TestCdhidefInDocker(unittest.TestCase):
     def test_run_hidef_no_args(self):
         temp_dir = tempfile.mkdtemp(dir=os.getenv('CDHIDEF_TMPDIR'))
         try:
-            src_input_file = os.path.join(TestCdhidefInDocker.HUNDRED_NODE_DIR, 'input.txt')
+            src_input_file = os.path.join(TestCdhidefHCXInDocker.HUNDRED_NODE_DIR, 'input.txt')
             input_file = os.path.join(temp_dir, 'input.txt')
             shutil.copyfile(src_input_file, input_file)
             ecode, out, err = self.run_hidef_docker([input_file], temp_dir=temp_dir)
@@ -79,7 +76,7 @@ class TestCdhidefInDocker(unittest.TestCase):
     def test_run_hidef_leiden_algorithm(self):
         temp_dir = tempfile.mkdtemp(dir=os.getenv('CDHIDEF_TMPDIR'))
         try:
-            src_input_file = os.path.join(TestCdhidefInDocker.HUNDRED_NODE_DIR, 'input.txt')
+            src_input_file = os.path.join(TestCdhidefHCXInDocker.HUNDRED_NODE_DIR, 'input.txt')
             input_file = os.path.join(temp_dir, 'input.txt')
             shutil.copyfile(src_input_file, input_file)
             ecode, out, err = self.run_hidef_docker([input_file,
